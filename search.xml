@@ -21,19 +21,6 @@
       </tags>
   </entry>
   <entry>
-    <title>依赖反转</title>
-    <url>/2020/10/30/2020-10-30-%E4%BE%9D%E8%B5%96%E5%8F%8D%E8%BD%AC/</url>
-    <content><![CDATA[<p>多态应该是面向对象编程范式，提供了最强大的能力，多态使得依赖反转成为了可能。</p>
-<p>没有多态以前，高层函数要调用底层函数是一定要依赖于底层，再直接调用它定义函数。这种依赖是必须的，不同语言用不同的方式来实现这种依赖，C用include导入头文件，Java用import导入包名，C#用using导入命名空间。<br>但是有了多态这种关系就被打破了。</p>
-<span id="more"></span>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/dependency_inversion.png" alt="依赖翻转案例"><br>A模块为了调用B模块的能力，第一幅图从A依赖B，但是通过依赖反转，A模块通过定义接口依赖于抽象接口，B模块去实现接口，这样依赖，A不再依赖于B模块，而B模块依赖于A模块的抽象接口了。<br>结合上面的内容，最后再体会下依赖反转原则的定义，就比较好理解了：<br>    1.高层次的模块不应该依赖于低层次的模块，两者都应该依赖于抽象接口。<br>    2.抽象接口不应该依赖于具体的实现和具体实现，而具体的实现应该依赖于抽象接口。<br><strong>面向对象编程到底是什么？业界在这个问题上存在很多不同的说法和意见，然后对于一个软件架构师来说，其含义应该是非常明确的，面向对象编程就是以多态的手段对源代码中的依赖关系进行控制的能力，这种能力让软件加入是可以构建出某种插件式架构，让高层策略性组建与底层实现组件相分离，底层祖先可以被编译成插件，实现独立与高层组建的开发和部署。</strong></p>
-]]></content>
-      <tags>
-        <tag>编程</tag>
-        <tag>依赖反转</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>理解会话与请求</title>
     <url>/2020/10/20/2020-10-20-%E5%A4%9A%E5%AA%92%E4%BD%93%E7%9B%B8%E6%9C%BA%E7%B3%BB%E5%88%97_%E7%90%86%E8%A7%A3%E4%BC%9A%E8%AF%9D%E4%B8%8E%E8%AF%B7%E6%B1%82/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇文章介绍android相机会话与请求的相关知识。包括：</p>
@@ -91,43 +78,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Vulkan系列:环境安装</title>
-    <url>/2021/02/27/2021-02-26-Vulkan%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<h1 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1 安装环境"></a>1 安装环境</h1><h2 id="Vusual-Studio-2015-or-higher-version"><a href="#Vusual-Studio-2015-or-higher-version" class="headerlink" title="Vusual Studio 2015 or higher version"></a>Vusual Studio 2015 or higher version</h2><p>建议去官网下载，我自己用的是早期在学校做项目时候自己保存在百度网盘上的一份安装包。</p>
-<p>链接: <a href="https://pan.baidu.com/s/1gfu64eSLUngNNam7FtNmXA">https://pan.baidu.com/s/1gfu64eSLUngNNam7FtNmXA</a> 提取码: qmgv</p>
-<h2 id="vulkan驱动程序"><a href="#vulkan驱动程序" class="headerlink" title="vulkan驱动程序"></a>vulkan驱动程序</h2><p>大部分硬件厂商已经在默认的驱动安装包中包含了Vulkan的支持</p>
+    <title>依赖反转</title>
+    <url>/2020/10/30/2020-10-30-%E4%BE%9D%E8%B5%96%E5%8F%8D%E8%BD%AC/</url>
+    <content><![CDATA[<p>多态应该是面向对象编程范式，提供了最强大的能力，多态使得依赖反转成为了可能。</p>
+<p>没有多态以前，高层函数要调用底层函数是一定要依赖于底层，再直接调用它定义函数。这种依赖是必须的，不同语言用不同的方式来实现这种依赖，C用include导入头文件，Java用import导入包名，C#用using导入命名空间。<br>但是有了多态这种关系就被打破了。</p>
 <span id="more"></span>
-<h2 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h2><p>建议去官网下载，这里提供另一个下载路径。</p>
-<p><a href="http://www.51xiazai.cn/soft/14542.htm">python3.9下载</a></p>
-<p>安装过程中选择添加环境变量到PATH，如果没有的话，安装后需要自行添加。</p>
-<p>查看安装结果</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator&gt;python --version</span><br><span class="line">Python 3.9.0</span><br></pre></td></tr></table></figure>
-
-<h2 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h2><p>下载位置<a href="https://cmake.org/files/">https://cmake.org/files/</a> </p>
-<p>太慢的话 我在下面链接里下载了一个腾讯软件中心的版本</p>
-<p><a href="https://pc.qq.com/detail/11/detail_23371.html">Cmake下载</a></p>
-<p>安装过程中选择添加环境变量到PATH，如果没有的话，安装后需要自行添加。</p>
-<p>查看安装结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator&gt;cmake --version</span><br><span class="line">cmake version 3.15.5</span><br><span class="line"></span><br><span class="line">CMake suite maintained and supported by Kitware (kitware.com/cmake).</span><br></pre></td></tr></table></figure>
-
-<h2 id="LunarG-sdk"><a href="#LunarG-sdk" class="headerlink" title="LunarG sdk"></a>LunarG sdk</h2><p>下载路径：<a href="https://vulkan.lunarg.com/sdk/home#windows">LunarG sdk官网下载</a></p>
-<p>sdk的默认安装路径C:\VulkanSDK\版本。安装成功后，SDK的bin目录会自动添加到系统的环境变量PATH中，还会添加一个新的环境变量VK_SDK_PATH，指向sdk安装路径。</p>
-<p>安装程序还会降Vulkan加载器（vulkan-1.dll）添加到C:\Windows\System32<br>安装程序后不知道为啥，C:\Windows\System32没有vulkan-1.dll，只有一个vulkan-1-999-0-0-0.dll，导致我运行C:\VulkanSDK\1.2.141.0\Bin\vkcube.exe 运行失败。所以我把vulkan-1-999-0-0-0.dll复制一份并改名为vulkan-1.dll。</p>
-<p>同样的需要将 C:\Windows\SysWOW64里面的ulkan-1-999-0-0-0.dll复制一份并改名为vulkan-1.dll。不然后续调试过程中会报找不到vulkan-1.dll错误。</p>
-<h1 id="2-编译调试Samples"><a href="#2-编译调试Samples" class="headerlink" title="2 编译调试Samples"></a>2 编译调试Samples</h1><p>LunarG sdk中包含有大量vulkan学习的案例，可以通过cmake构建案例工程并进行调试。</p>
-<p>进入<code>C:\VulkanSDK\1.2.141.0\Samples</code>文件夹,执行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir build2</span><br><span class="line">cd build2</span><br><span class="line">Cmake -G &quot;Visual Studio 14 Win64&quot; ..</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/vulkan/1618013138890.png" alt="点乘公式"></p>
-<p>打开VULKAN-SAMPLES.sln，并且分别选择debug和release两种方式重新生成（rebuild）所有的项目</p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/vulkan/1618013720687.png" alt="点乘公式"></p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/vulkan/1618013703546.png" alt="点乘公式"></p>
-<p>接下来，可以对项目进行调试。例如下图查看并运行15-draw_cube项目。</p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/vulkan/1618014086459.png" alt="点乘公式"></p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/dependency_inversion.png" alt="依赖翻转案例"><br>A模块为了调用B模块的能力，第一幅图从A依赖B，但是通过依赖反转，A模块通过定义接口依赖于抽象接口，B模块去实现接口，这样依赖，A不再依赖于B模块，而B模块依赖于A模块的抽象接口了。<br>结合上面的内容，最后再体会下依赖反转原则的定义，就比较好理解了：<br>    1.高层次的模块不应该依赖于低层次的模块，两者都应该依赖于抽象接口。<br>    2.抽象接口不应该依赖于具体的实现和具体实现，而具体的实现应该依赖于抽象接口。<br><strong>面向对象编程到底是什么？业界在这个问题上存在很多不同的说法和意见，然后对于一个软件架构师来说，其含义应该是非常明确的，面向对象编程就是以多态的手段对源代码中的依赖关系进行控制的能力，这种能力让软件加入是可以构建出某种插件式架构，让高层策略性组建与底层实现组件相分离，底层祖先可以被编译成插件，实现独立与高层组建的开发和部署。</strong></p>
 ]]></content>
       <tags>
-        <tag>Vulkan</tag>
-        <tag>环境配置</tag>
+        <tag>编程</tag>
+        <tag>依赖反转</tag>
       </tags>
   </entry>
   <entry>
@@ -181,24 +141,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vulkan系列:配置开发环境</title>
-    <url>/2021/02/27/2021-02-26-Vulkan%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="配置vulkan开发环境"><a href="#配置vulkan开发环境" class="headerlink" title="配置vulkan开发环境"></a>配置vulkan开发环境</h1><p>开发工具：Visual Studio</p>
-<h2 id="1-VC-目录"><a href="#1-VC-目录" class="headerlink" title="1 VC++目录"></a>1 VC++目录</h2><p>需要修改<strong>包含目录</strong>和<strong>库目录</strong>。</p>
-<p><img src="https://gitee.com/hangliebe/blog/raw/master/pic/1606751963707.png" alt="1606751963707"></p>
-<p>包含目录中添加C:\VulkanSDK\1.2.141.0\Include</p>
-<span id="more"></span>
-<p>库目录中添加C:\VulkanSDK\1.2.141.0\Bin32和C:\VulkanSDK\1.2.141.0\Lib32</p>
-<p><img src="https://gitee.com/hangliebe/blog/raw/master/pic/1606752030227.png" alt="1606752030227"></p>
-<h2 id="2-链接器"><a href="#2-链接器" class="headerlink" title="2 链接器"></a>2 链接器</h2><p>链接器-输入：添加vulkan-1.lib，同样需要修改Win32和Win64平台。</p>
-<p><img src="https://gitee.com/hangliebe/blog/raw/master/pic/1606752144902.png" alt="1606752144902"></p>
-]]></content>
-      <tags>
-        <tag>Vulkan</tag>
-        <tag>环境配置</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>构建系统学习</title>
     <url>/2021/02/28/2021-02-28-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p>一般来说，<strong>元构建系统</strong>生成构建文件，<strong>构建工具</strong>进一步将其编译构建生成目标文件。</p>
@@ -218,6 +160,64 @@
       <tags>
         <tag>GN</tag>
         <tag>ninja</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vulkan系列:环境安装</title>
+    <url>/2021/02/27/2021-02-26-Vulkan%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<h1 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1 安装环境"></a>1 安装环境</h1><h2 id="Vusual-Studio-2015-or-higher-version"><a href="#Vusual-Studio-2015-or-higher-version" class="headerlink" title="Vusual Studio 2015 or higher version"></a>Vusual Studio 2015 or higher version</h2><p>建议去官网下载，我自己用的是早期在学校做项目时候自己保存在百度网盘上的一份安装包。</p>
+<p>链接: <a href="https://pan.baidu.com/s/1gfu64eSLUngNNam7FtNmXA">https://pan.baidu.com/s/1gfu64eSLUngNNam7FtNmXA</a> 提取码: qmgv</p>
+<h2 id="vulkan驱动程序"><a href="#vulkan驱动程序" class="headerlink" title="vulkan驱动程序"></a>vulkan驱动程序</h2><p>大部分硬件厂商已经在默认的驱动安装包中包含了Vulkan的支持</p>
+<span id="more"></span>
+<h2 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h2><p>建议去官网下载，这里提供另一个下载路径。</p>
+<p><a href="http://www.51xiazai.cn/soft/14542.htm">python3.9下载</a></p>
+<p>安装过程中选择添加环境变量到PATH，如果没有的话，安装后需要自行添加。</p>
+<p>查看安装结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator&gt;python --version</span><br><span class="line">Python 3.9.0</span><br></pre></td></tr></table></figure>
+
+<h2 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h2><p>下载位置<a href="https://cmake.org/files/">https://cmake.org/files/</a> </p>
+<p>太慢的话 我在下面链接里下载了一个腾讯软件中心的版本</p>
+<p><a href="https://pc.qq.com/detail/11/detail_23371.html">Cmake下载</a></p>
+<p>安装过程中选择添加环境变量到PATH，如果没有的话，安装后需要自行添加。</p>
+<p>查看安装结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator&gt;cmake --version</span><br><span class="line">cmake version 3.15.5</span><br><span class="line"></span><br><span class="line">CMake suite maintained and supported by Kitware (kitware.com/cmake).</span><br></pre></td></tr></table></figure>
+
+<h2 id="LunarG-sdk"><a href="#LunarG-sdk" class="headerlink" title="LunarG sdk"></a>LunarG sdk</h2><p>下载路径：<a href="https://vulkan.lunarg.com/sdk/home#windows">LunarG sdk官网下载</a></p>
+<p>sdk的默认安装路径C:\VulkanSDK\版本。安装成功后，SDK的bin目录会自动添加到系统的环境变量PATH中，还会添加一个新的环境变量VK_SDK_PATH，指向sdk安装路径。</p>
+<p>安装程序还会降Vulkan加载器（vulkan-1.dll）添加到C:\Windows\System32<br>安装程序后不知道为啥，C:\Windows\System32没有vulkan-1.dll，只有一个vulkan-1-999-0-0-0.dll，导致我运行C:\VulkanSDK\1.2.141.0\Bin\vkcube.exe 运行失败。所以我把vulkan-1-999-0-0-0.dll复制一份并改名为vulkan-1.dll。</p>
+<p>同样的需要将 C:\Windows\SysWOW64里面的ulkan-1-999-0-0-0.dll复制一份并改名为vulkan-1.dll。不然后续调试过程中会报找不到vulkan-1.dll错误。</p>
+<h1 id="2-编译调试Samples"><a href="#2-编译调试Samples" class="headerlink" title="2 编译调试Samples"></a>2 编译调试Samples</h1><p>LunarG sdk中包含有大量vulkan学习的案例，可以通过cmake构建案例工程并进行调试。</p>
+<p>进入<code>C:\VulkanSDK\1.2.141.0\Samples</code>文件夹,执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir build2</span><br><span class="line">cd build2</span><br><span class="line">Cmake -G &quot;Visual Studio 14 Win64&quot; ..</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/vulkan/1618013138890.png" alt="点乘公式"></p>
+<p>打开VULKAN-SAMPLES.sln，并且分别选择debug和release两种方式重新生成（rebuild）所有的项目</p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/vulkan/1618013720687.png" alt="点乘公式"></p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/vulkan/1618013703546.png" alt="点乘公式"></p>
+<p>接下来，可以对项目进行调试。例如下图查看并运行15-draw_cube项目。</p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/vulkan/1618014086459.png" alt="点乘公式"></p>
+]]></content>
+      <tags>
+        <tag>Vulkan</tag>
+        <tag>环境配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vulkan系列:配置开发环境</title>
+    <url>/2021/02/27/2021-02-26-Vulkan%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="配置vulkan开发环境"><a href="#配置vulkan开发环境" class="headerlink" title="配置vulkan开发环境"></a>配置vulkan开发环境</h1><p>开发工具：Visual Studio</p>
+<h2 id="1-VC-目录"><a href="#1-VC-目录" class="headerlink" title="1 VC++目录"></a>1 VC++目录</h2><p>需要修改<strong>包含目录</strong>和<strong>库目录</strong>。</p>
+<p><img src="https://gitee.com/hangliebe/blog/raw/master/pic/1606751963707.png" alt="1606751963707"></p>
+<p>包含目录中添加C:\VulkanSDK\1.2.141.0\Include</p>
+<span id="more"></span>
+<p>库目录中添加C:\VulkanSDK\1.2.141.0\Bin32和C:\VulkanSDK\1.2.141.0\Lib32</p>
+<p><img src="https://gitee.com/hangliebe/blog/raw/master/pic/1606752030227.png" alt="1606752030227"></p>
+<h2 id="2-链接器"><a href="#2-链接器" class="headerlink" title="2 链接器"></a>2 链接器</h2><p>链接器-输入：添加vulkan-1.lib，同样需要修改Win32和Win64平台。</p>
+<p><img src="https://gitee.com/hangliebe/blog/raw/master/pic/1606752144902.png" alt="1606752144902"></p>
+]]></content>
+      <tags>
+        <tag>Vulkan</tag>
+        <tag>环境配置</tag>
       </tags>
   </entry>
   <entry>
@@ -326,6 +326,68 @@
       </tags>
   </entry>
   <entry>
+    <title>相机能力_开篇</title>
+    <url>/2021/03/24/2021-03-24-%E7%9B%B8%E6%9C%BA%E8%83%BD%E5%8A%9B/</url>
+    <content><![CDATA[<p>做多媒体相机开发很长一段时间了，需要在自己的笔记本上及时写好总结。比如：</p>
+<p>1 Android相机的体系架构</p>
+<p>2 相机服务的作用</p>
+<p>3 相机的一些调试方法</p>
+<p>4 ……</p>
+]]></content>
+      <tags>
+        <tag>android相机</tag>
+        <tag>多媒体</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>应用无法获取相机tag</title>
+    <url>/2021/04/08/2021-04-08-%E5%A4%9A%E5%AA%92%E4%BD%93%E7%9B%B8%E6%9C%BA%E7%B3%BB%E5%88%97_%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96%E7%9B%B8%E6%9C%BAtag/</url>
+    <content><![CDATA[<p>Camera应用Tag无法获取，首先检查Tag上报情况，如果已经上报，则进一步检查重复定义情况。</p>
+<h2 id="Tag属性上报"><a href="#Tag属性上报" class="headerlink" title="Tag属性上报"></a>Tag属性上报</h2><p>adb shell dumpsys media.camera-&gt;camera in for. txt<br>检查Hal是否已经把应用无法获取的tag上报给了Framework层，如果没有，则需要底层适配。</p>
+<h2 id="重复定义"><a href="#重复定义" class="headerlink" title="重复定义"></a>重复定义</h2><p>如果通过dump的信息确认tag已经上报，可以进一步检查是否存在tag属性重复定义的情况。</p>
+<span id="more"></span>
+<ul>
+<li><p>底层对Tag定义进行排查，是否存在重复定义。</p>
+</li>
+<li><p>查看Android. request. available Character isticsKeys，看是否有相同的值。</p>
+</li>
+</ul>
+<p>关键代码</p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/getCameraCharacteristics.png" alt="getCameraCharacteristics"></p>
+]]></content>
+      <tags>
+        <tag>相机</tag>
+        <tag>问题分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多媒体相机系列:认识相机</title>
+    <url>/2021/04/13/2021-04-13-%E5%A4%9A%E5%AA%92%E4%BD%93%E7%9B%B8%E6%9C%BA%E7%B3%BB%E5%88%97_%E8%AE%A4%E8%AF%86%E7%9B%B8%E6%9C%BA/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇文章为入门相机的同学简单介绍了相机的发展过程以及基本原理，这些基础知识其实很重要，可以帮助我们更好的理解相机拍摄出图的过程。</p>
+<h2 id="1-小孔成像"><a href="#1-小孔成像" class="headerlink" title="1 小孔成像"></a>1 小孔成像</h2><p>小孔成像，我国的学者—<a href="https://baike.baidu.com/item/%E5%A2%A8%E7%BF%9F/850519">墨翟</a>（墨子）和他的学生，做了世界上第一个小孔成倒像的实验，解释了小孔成倒像的原因，指出了光沿直线进行的性质，早于牛顿2000多年就已经总结出相似的理论 。这是对光沿直线传播的第一次科学解释。</p>
+<p>用一个带有小孔的板遮挡在墙体与物之间，墙体上就会形成物的倒影，我们把这样的现象叫小孔成像。前后移动中间的板，墙体上像的大小也会随之发生变化，这种现象说明了光沿直线传播的性质。</p>
+<span id="more"></span>
+<p>小孔成像就是相机最基础的原理。</p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/camera/pinhole_imaging.png" alt="小孔成像"></p>
+<h2 id="2-暗箱作画"><a href="#2-暗箱作画" class="headerlink" title="2 暗箱作画"></a>2 暗箱作画</h2><p>霍克尼是当今艺术领域最具影响力的大师之一，一生创作了大量腐蚀板画。这位大师在2012年出版的《隐秘的知识》一书中告诉读者，文艺复兴时代，像达芬奇，拉斐尔等一众艺术宗师们作画时都会利用小孔成像原理，通过透视镜装置来暗箱临摹。这种暗箱作画的方式，为相机得以发展做了重要铺垫。</p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/camera/painting_in_dark_box.png" alt="暗箱操作"></p>
+<h2 id="3-凸透镜"><a href="#3-凸透镜" class="headerlink" title="3 凸透镜"></a>3 凸透镜</h2><p>凸透镜具有屈光性，可以汇聚光线， 照相机运用凸透镜的成像规律可以使成像更清晰。1550年意大利的卡尔达诺就将双凸透镜置于原来的针孔位置上，得到了更好的映像效果。凸透镜也是如今相机必不可少的重要组成器件。</p>
+<h2 id="4-感光材料"><a href="#4-感光材料" class="headerlink" title="4 感光材料"></a>4 感光材料</h2><p>暗箱作画虽然帮助画家大大提升了作画效率，但是依旧难以满足科学家和商人们对快速纪录影像的极致追求。既然光可以将物体的影像呈现在画板上，那有什么办法可以让“光照记录”可以永久保存下来呢？显然，要找到答案，就必须找到什么物质可以对光照产生某种化学反应就好了。</p>
+<p>1825年，法国人将感光材料放进暗箱，拍摄了现存最早的照片。下面的照片名为《 窗外景色 》，话说曝光了8小时。</p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/camera/first_picture.png" alt="第一张照片"></p>
+<p>1888年，美国柯达公司生产了新型感光材料<a href="https://zh.wikipedia.org/wiki/%E5%BA%95%E7%89%87">胶卷</a>。胶卷用到的主要化学材料是卤化银， 卤化银感光材料的感光度比非银感光材料的高很多，加以它的感色范围宽，易于得到彩色图像，所以被作为相机感光的重要化学材料。 </p>
+<h2 id="5-数码相机"><a href="#5-数码相机" class="headerlink" title="5 数码相机"></a>5 数码相机</h2><p>数码相机和普通相机最主要的区别就在于感光材料进化成了感光元件，感光元件将光学影像转换成电子数据，两种最广泛应用的感光元件：<a href="https://zh.wikipedia.org/wiki/%E6%84%9F%E5%85%89%E8%80%A6%E5%90%88%E5%85%83%E4%BB%B6">CCD</a>和<a href="https://zh.wikipedia.org/wiki/%E4%BA%92%E8%A3%9C%E5%BC%8F%E9%87%91%E5%B1%AC%E6%B0%A7%E5%8C%96%E7%89%A9%E5%8D%8A%E5%B0%8E%E9%AB%94">CMOS</a>。感光元件也就camera sensor，负责感光并转换输出最初的元数据文件，再经过DSP，ISP等图像数据处理单元，生成对用户友好可视的图像。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>现在，我们已经明白了，拍照过程实际上是相机对物体反射光线的记录过程，实际上物体本身的颜色并不是我们对其所感知的颜色，比如芒果是黄色的，并不是芒果本身是黄色，而恰恰因为芒果可以吸收其他光线，而反射了更多的黄色光，因此我们看到的芒果是黄色。 </p>
+<p>要深入学习多媒体知识，我们需要对更多的关于光与颜色基础知识进行学习。</p>
+<p>参考文档:</p>
+<p>1 <a href="https://baike.baidu.com/item/%E5%B0%8F%E5%AD%94%E6%88%90%E5%83%8F/866213?fr=aladdin">百度词条_小孔成像</a></p>
+<p>2  <a href="https://zh.wikipedia.org/wiki/%E7%85%A7%E7%9B%B8%E6%A9%9F">维基百科_照相机</a></p>
+]]></content>
+      <tags>
+        <tag>相机</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vulkan系列:推送常数</title>
     <url>/2021/04/05/2021-04-05-vulkan%E6%8E%A8%E9%80%81%E5%B8%B8%E6%95%B0/</url>
     <content><![CDATA[<h2 id="推送常数说明"><a href="#推送常数说明" class="headerlink" title="推送常数说明"></a>推送常数说明</h2><p>推送常数是一种特殊的更新着色器常量数据的方法，它使用指令缓存的方式，而非资源的写入或者复制描述符来完成更新的操作。<br>推送常数提供了一种高速的优化方式，可以高效地更新流水线中的常量数据。<br>下面以一个例子来说明推送常数怎么使用</p>
@@ -369,68 +431,6 @@
       </tags>
   </entry>
   <entry>
-    <title>相机能力_开篇</title>
-    <url>/2021/03/24/2021-03-24-%E7%9B%B8%E6%9C%BA%E8%83%BD%E5%8A%9B/</url>
-    <content><![CDATA[<p>做多媒体相机开发很长一段时间了，需要在自己的笔记本上及时写好总结。比如：</p>
-<p>1 Android相机的体系架构</p>
-<p>2 相机服务的作用</p>
-<p>3 相机的一些调试方法</p>
-<p>4 ……</p>
-]]></content>
-      <tags>
-        <tag>android相机</tag>
-        <tag>多媒体</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多媒体相机系列:认识相机</title>
-    <url>/2021/04/13/2021-04-13-%E5%A4%9A%E5%AA%92%E4%BD%93%E7%9B%B8%E6%9C%BA%E7%B3%BB%E5%88%97_%E8%AE%A4%E8%AF%86%E7%9B%B8%E6%9C%BA/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇文章为入门相机的同学简单介绍了相机的发展过程以及基本原理，这些基础知识其实很重要，可以帮助我们更好的理解相机拍摄出图的过程。</p>
-<h2 id="1-小孔成像"><a href="#1-小孔成像" class="headerlink" title="1 小孔成像"></a>1 小孔成像</h2><p>小孔成像，我国的学者—<a href="https://baike.baidu.com/item/%E5%A2%A8%E7%BF%9F/850519">墨翟</a>（墨子）和他的学生，做了世界上第一个小孔成倒像的实验，解释了小孔成倒像的原因，指出了光沿直线进行的性质，早于牛顿2000多年就已经总结出相似的理论 。这是对光沿直线传播的第一次科学解释。</p>
-<p>用一个带有小孔的板遮挡在墙体与物之间，墙体上就会形成物的倒影，我们把这样的现象叫小孔成像。前后移动中间的板，墙体上像的大小也会随之发生变化，这种现象说明了光沿直线传播的性质。</p>
-<span id="more"></span>
-<p>小孔成像就是相机最基础的原理。</p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/camera/pinhole_imaging.png" alt="小孔成像"></p>
-<h2 id="2-暗箱作画"><a href="#2-暗箱作画" class="headerlink" title="2 暗箱作画"></a>2 暗箱作画</h2><p>霍克尼是当今艺术领域最具影响力的大师之一，一生创作了大量腐蚀板画。这位大师在2012年出版的《隐秘的知识》一书中告诉读者，文艺复兴时代，像达芬奇，拉斐尔等一众艺术宗师们作画时都会利用小孔成像原理，通过透视镜装置来暗箱临摹。这种暗箱作画的方式，为相机得以发展做了重要铺垫。</p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/camera/painting_in_dark_box.png" alt="暗箱操作"></p>
-<h2 id="3-凸透镜"><a href="#3-凸透镜" class="headerlink" title="3 凸透镜"></a>3 凸透镜</h2><p>凸透镜具有屈光性，可以汇聚光线， 照相机运用凸透镜的成像规律可以使成像更清晰。1550年意大利的卡尔达诺就将双凸透镜置于原来的针孔位置上，得到了更好的映像效果。凸透镜也是如今相机必不可少的重要组成器件。</p>
-<h2 id="4-感光材料"><a href="#4-感光材料" class="headerlink" title="4 感光材料"></a>4 感光材料</h2><p>暗箱作画虽然帮助画家大大提升了作画效率，但是依旧难以满足科学家和商人们对快速纪录影像的极致追求。既然光可以将物体的影像呈现在画板上，那有什么办法可以让“光照记录”可以永久保存下来呢？显然，要找到答案，就必须找到什么物质可以对光照产生某种化学反应就好了。</p>
-<p>1825年，法国人将感光材料放进暗箱，拍摄了现存最早的照片。下面的照片名为《 窗外景色 》，话说曝光了8小时。</p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/camera/first_picture.png" alt="第一张照片"></p>
-<p>1888年，美国柯达公司生产了新型感光材料<a href="https://zh.wikipedia.org/wiki/%E5%BA%95%E7%89%87">胶卷</a>。胶卷用到的主要化学材料是卤化银， 卤化银感光材料的感光度比非银感光材料的高很多，加以它的感色范围宽，易于得到彩色图像，所以被作为相机感光的重要化学材料。 </p>
-<h2 id="5-数码相机"><a href="#5-数码相机" class="headerlink" title="5 数码相机"></a>5 数码相机</h2><p>数码相机和普通相机最主要的区别就在于感光材料进化成了感光元件，感光元件将光学影像转换成电子数据，两种最广泛应用的感光元件：<a href="https://zh.wikipedia.org/wiki/%E6%84%9F%E5%85%89%E8%80%A6%E5%90%88%E5%85%83%E4%BB%B6">CCD</a>和<a href="https://zh.wikipedia.org/wiki/%E4%BA%92%E8%A3%9C%E5%BC%8F%E9%87%91%E5%B1%AC%E6%B0%A7%E5%8C%96%E7%89%A9%E5%8D%8A%E5%B0%8E%E9%AB%94">CMOS</a>。感光元件也就camera sensor，负责感光并转换输出最初的元数据文件，再经过DSP，ISP等图像数据处理单元，生成对用户友好可视的图像。</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>现在，我们已经明白了，拍照过程实际上是相机对物体反射光线的记录过程，实际上物体本身的颜色并不是我们对其所感知的颜色，比如芒果是黄色的，并不是芒果本身是黄色，而恰恰因为芒果可以吸收其他光线，而反射了更多的黄色光，因此我们看到的芒果是黄色。 </p>
-<p>要深入学习多媒体知识，我们需要对更多的关于光与颜色基础知识进行学习。</p>
-<p>参考文档:</p>
-<p>1 <a href="https://baike.baidu.com/item/%E5%B0%8F%E5%AD%94%E6%88%90%E5%83%8F/866213?fr=aladdin">百度词条_小孔成像</a></p>
-<p>2  <a href="https://zh.wikipedia.org/wiki/%E7%85%A7%E7%9B%B8%E6%A9%9F">维基百科_照相机</a></p>
-]]></content>
-      <tags>
-        <tag>相机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>应用无法获取相机tag</title>
-    <url>/2021/04/08/2021-04-08-%E5%A4%9A%E5%AA%92%E4%BD%93%E7%9B%B8%E6%9C%BA%E7%B3%BB%E5%88%97_%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96%E7%9B%B8%E6%9C%BAtag/</url>
-    <content><![CDATA[<p>Camera应用Tag无法获取，首先检查Tag上报情况，如果已经上报，则进一步检查重复定义情况。</p>
-<h2 id="Tag属性上报"><a href="#Tag属性上报" class="headerlink" title="Tag属性上报"></a>Tag属性上报</h2><p>adb shell dumpsys media.camera-&gt;camera in for. txt<br>检查Hal是否已经把应用无法获取的tag上报给了Framework层，如果没有，则需要底层适配。</p>
-<h2 id="重复定义"><a href="#重复定义" class="headerlink" title="重复定义"></a>重复定义</h2><p>如果通过dump的信息确认tag已经上报，可以进一步检查是否存在tag属性重复定义的情况。</p>
-<span id="more"></span>
-<ul>
-<li><p>底层对Tag定义进行排查，是否存在重复定义。</p>
-</li>
-<li><p>查看Android. request. available Character isticsKeys，看是否有相同的值。</p>
-</li>
-</ul>
-<p>关键代码</p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/getCameraCharacteristics.png" alt="getCameraCharacteristics"></p>
-]]></content>
-      <tags>
-        <tag>相机</tag>
-        <tag>问题分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多媒体相机系列:相机使用</title>
     <url>/2021/04/15/2021-04-15-%E5%A4%9A%E5%AA%92%E4%BD%93%E7%9B%B8%E6%9C%BA%E7%B3%BB%E5%88%97_%E7%9B%B8%E6%9C%BA%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>系统多媒体主要包含音频，视频以及相机三大能力板块，相机能力是其中至关重要的一个，可以说所有与我们生活至关重要的那些app都离不开对相机功能的应用。</p>
@@ -468,17 +468,6 @@
       </tags>
   </entry>
   <entry>
-    <title>多媒体相机系列:R版本ZoomRatio</title>
-    <url>/2021/04/16/2021-04-16-%E5%A4%9A%E5%AA%92%E4%BD%93%E7%9B%B8%E6%9C%BA%E7%B3%BB%E5%88%97_R%E7%89%88%E6%9C%ACZoomRatio/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Android R版本增加了新的zoomRatio的方式进行变焦调节，可以更精确的进行zoom调节。</p>
-<h2 id="fwk适配的时序图"><a href="#fwk适配的时序图" class="headerlink" title="fwk适配的时序图"></a>fwk适配的时序图</h2><span id="more"></span>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/camera/ZoomRatio.png" alt="ZoomRatio时序图"></p>
-]]></content>
-      <tags>
-        <tag>相机</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>UmlMaker——移动的UML设计</title>
     <url>/2021/04/24/2021-04-24-UmlMaker%E7%A7%BB%E5%8A%A8%E7%9A%84UML%E8%AE%BE%E8%AE%A1/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>常常想要做一些软件设计，但是苦于没有PC时时在手，没有办法将自己的一些软件设计的想法及时记录下来。一直使用plantUml做软件图的绘制，就希望可以找到一款移动软件可以替代电脑，方便平时做图。我在华为和苹果的应用商城都找了下，没有找到称心的UML软件。</p>
@@ -508,6 +497,17 @@
 ]]></content>
       <tags>
         <tag>plantUml</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多媒体相机系列:R版本ZoomRatio</title>
+    <url>/2021/04/16/2021-04-16-%E5%A4%9A%E5%AA%92%E4%BD%93%E7%9B%B8%E6%9C%BA%E7%B3%BB%E5%88%97_R%E7%89%88%E6%9C%ACZoomRatio/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Android R版本增加了新的zoomRatio的方式进行变焦调节，可以更精确的进行zoom调节。</p>
+<h2 id="fwk适配的时序图"><a href="#fwk适配的时序图" class="headerlink" title="fwk适配的时序图"></a>fwk适配的时序图</h2><span id="more"></span>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/camera/ZoomRatio.png" alt="ZoomRatio时序图"></p>
+]]></content>
+      <tags>
+        <tag>相机</tag>
       </tags>
   </entry>
   <entry>
@@ -1017,6 +1017,37 @@
       </tags>
   </entry>
   <entry>
+    <title>端午节小记</title>
+    <url>/2021/06/14/2021-06-14-%E7%AB%AF%E5%8D%88%E8%8A%82%E5%B0%8F%E8%AE%B0/</url>
+    <content><![CDATA[<p>哥哥嫂子，小侄女，还有妈妈端午节来上海玩了。</p>
+<h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><p>6月12号，放假第一天，我们一早开车去了市里，第一站直奔上海科技馆。</p>
+<span id="more"></span>
+
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/kejiguan2.jpg" alt="kejiguan2"></p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/kejiguan1.jpg" alt="kejiguan1"></p>
+<p>从科技馆出来，去了就近的一家湖南菜饭店，叫温暖你的猪，饱餐了一顿。饭后接着开车去往城隍庙，在城隍庙停车场停车以后，没逛多久，发生一个小插曲，琴吖说手机找不到了。我打了个电话给饭店，想让店员帮忙去卫生间找找手机，和店员沟通后发现手机已经被人拾到并放到保安室了，随后我和哥开车去取手机，她们娘仨继续逛街。一来一回，一个来小时。</p>
+<p>回来后，发现嫂子和小侄女穿上了漂亮的汉服装。</p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/chenghuangmiao.jpg" alt="chenghuangmiao"></p>
+<p>接着我们一路步行前往外滩，在外滩拍照留念。</p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/hepingfandian.jpg" alt="hepingfandian"></p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund9.jpg" alt="thebund9"></p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund8.jpg" alt="thebund8"></p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund4.jpg" alt="thebund4"></p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund5.jpg" alt="thebund5"></p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund6.jpg" alt="thebund6"></p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund7.jpg" alt="thebund7"></p>
+<p>这一天下来已经超级累了，她们娘仨打了个车去停车场，我和哥骑着哈罗单车赶去。</p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/road1.jpg" alt="road1"></p>
+<p>一路奔回松江后，去了追月小酒肆吃晚饭。</p>
+<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/dinner.jpg" alt="dinner"></p>
+<h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><p>第二天下雨，我们原本要去泰晤士小镇逛逛的计划取消了。上午去买了点衣服，下午就在家休息，晚上我们一起在家看了电影《你好，李焕英》。</p>
+<p>今天一早7点40的高铁，我将家人们送到松江南站。</p>
+]]></content>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>虚幻引擎入门</title>
     <url>/2021/06/19/2021-06-19-%E8%99%9A%E5%B9%BB%E5%BC%95%E6%93%8E%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/others/unrealengine.jpeg" alt="虚幻引擎"></p>
@@ -1064,37 +1095,6 @@
       <tags>
         <tag>计算机图形学</tag>
         <tag>虚幻引擎</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>端午节小记</title>
-    <url>/2021/06/14/2021-06-14-%E7%AB%AF%E5%8D%88%E8%8A%82%E5%B0%8F%E8%AE%B0/</url>
-    <content><![CDATA[<p>哥哥嫂子，小侄女，还有妈妈端午节来上海玩了。</p>
-<h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><p>6月12号，放假第一天，我们一早开车去了市里，第一站直奔上海科技馆。</p>
-<span id="more"></span>
-
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/kejiguan2.jpg" alt="kejiguan2"></p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/kejiguan1.jpg" alt="kejiguan1"></p>
-<p>从科技馆出来，去了就近的一家湖南菜饭店，叫温暖你的猪，饱餐了一顿。饭后接着开车去往城隍庙，在城隍庙停车场停车以后，没逛多久，发生一个小插曲，琴吖说手机找不到了。我打了个电话给饭店，想让店员帮忙去卫生间找找手机，和店员沟通后发现手机已经被人拾到并放到保安室了，随后我和哥开车去取手机，她们娘仨继续逛街。一来一回，一个来小时。</p>
-<p>回来后，发现嫂子和小侄女穿上了漂亮的汉服装。</p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/chenghuangmiao.jpg" alt="chenghuangmiao"></p>
-<p>接着我们一路步行前往外滩，在外滩拍照留念。</p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/hepingfandian.jpg" alt="hepingfandian"></p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund9.jpg" alt="thebund9"></p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund8.jpg" alt="thebund8"></p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund4.jpg" alt="thebund4"></p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund5.jpg" alt="thebund5"></p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund6.jpg" alt="thebund6"></p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/thebund7.jpg" alt="thebund7"></p>
-<p>这一天下来已经超级累了，她们娘仨打了个车去停车场，我和哥骑着哈罗单车赶去。</p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/road1.jpg" alt="road1"></p>
-<p>一路奔回松江后，去了追月小酒肆吃晚饭。</p>
-<p><img src="https://gitee.com/hangliebe/hangliebe/raw/master/img/life/dinner.jpg" alt="dinner"></p>
-<h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><p>第二天下雨，我们原本要去泰晤士小镇逛逛的计划取消了。上午去买了点衣服，下午就在家休息，晚上我们一起在家看了电影《你好，李焕英》。</p>
-<p>今天一早7点40的高铁，我将家人们送到松江南站。</p>
-]]></content>
-      <tags>
-        <tag>生活</tag>
       </tags>
   </entry>
   <entry>

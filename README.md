@@ -1,5 +1,5 @@
 ### Hi there 👋
-
+这里专注于多媒体，图形，游戏领域。
 <!--
 **hangliebe/hangliebe** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
